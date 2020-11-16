@@ -6,10 +6,10 @@ function getZero(num) {
     }
 }
 
-function timer() {
+function timer(id, date) {
     //Timer
 
-    const deadline = new Date('2020-12-31');
+    const deadline = new Date(date);
 
     function getTimeRemaining(endtime) {
         
@@ -25,7 +25,7 @@ function timer() {
             'hours': hours,
             'minutes': minutes,
             'seconds': seconds
-        }
+        };
     }
 
     function setClock(selector, endtime) {
@@ -53,7 +53,7 @@ function timer() {
         }
     }
 
-    setClock('.timer', deadline);
+    setClock(id, deadline);
 }
 
 export default timer;
